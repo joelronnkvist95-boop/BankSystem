@@ -18,8 +18,6 @@
 
                 
 
-
-
                 if(userInput == userName)
                 {
                     Console.WriteLine("Rätt användarnamn");
@@ -28,25 +26,33 @@
 
                     bool correctUserName = true;
 
-                    while (correctUserName)
+                    if (passwordInput == password)
                     {
-                        if (passwordInput == password)
-                        {
-                            bool loggedIn = true;
-                            Console.WriteLine("Rätt lösenord och användarnamn. Du är nu inloggad");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Fel lösenord, försök igen.");
-                        }
+                        bool loggedIn = true;
+                        Console.WriteLine("Rätt lösenord och användarnamn. Du är nu inloggad");
+                        Console.ReadKey();
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Fel lösenord, försök igen.");
                     }
 
-                   
+
                 }
                 else
                 {
                     Console.WriteLine("Felaktigt användarnamn. Försök igen");
                 }
+                break;
+            }
+
+            while (loggedIn)
+            {
+                Console.WriteLine("Meny");
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine();
             }
             
             
@@ -67,4 +73,6 @@
 
     }
 }
+
+
 
